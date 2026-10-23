@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD Industries</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        :root {
+            --bg-main: #0b0908;
+            --bg-dark: #14100e;
+            --orange: #ff7a00;
+            --orange-bright: #ff9a2e;
+            --orange-glow: rgba(255, 122, 0, 0.25);
+            --cream: #f3e9dc;
+            --muted: #998f85;
+        }
+        body {
+            background-color: var(--bg-main);
+            color: var(--cream);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 122, 0, 0.06) 0%, transparent 50%),
+                linear-gradient(rgba(255, 122, 0, 0.05) 1px transparent),
+                linear-gradient(90deg, rgba(255, 122, 0, 0.05) 1px transparent);
+            background-size: 100% 100%, 60px 60px, 60px 60px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+        }
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--orange-bright);
+        }
+        .logo span { color: var(--cream); }
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--orange-bright); }
+        .discord-btn {
+            border: 1px solid var(--orange);
+            color: var(--orange) !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+        }
+        .discord-btn:hover {
+            background: var(--orange);
+            color: #000 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 900px;
+            margin: 6rem auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        .hero-subtitle {
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+        .hero h1 span { color: var(--orange); }
+        .hero-desc {
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+        }
+        .pumpkin-icon {
+            font-size: 1.5rem;
+            margin: 0 0.3rem;
+        }
+        .buttons button {
+            padding: 0.9rem 1.8rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 0 0.5rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-bright) 100%);
+            color: #000;
+            border: none;
+            font-weight: 700;
+            box-shadow: 0 4px 20px var(--orange-glow);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--orange-bright);
+            border: 1px solid var(--orange);
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-secondary:hover {
+            background: var(--orange-glow);
+            transform: translateY(-2px);
+        }
+
+        /* What We Do Section */
+        .section {
+            max-width: 1200px;
+            margin: 8rem auto 4rem;
+            padding: 0 2rem;
+        }
+        .section-label {
+            color: var(--muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--cream);
+        }
+        .section h2 span { color: var(--orange); }
+        .section-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            color: var(--muted);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #443830;
+            font-size: 0.9rem;
+        }
+        footer span { color: var(--orange); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🎃 <span>BD</span> Industries</div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#rules">Rules</a>
+            <a href="#payment">Payment</a>
+            <a href="#discord" class="discord-btn">Discord</a>
+        </div>
+    </nav>
+
+    <!-- Hero Area -->
+    <section class="hero">
+        <p class="hero-subtitle">🎃 Design Studio 🎃</p>
+        <h1>Designs that make <br><span>your server stand out.</span></h1>
+        <p class="hero-desc">
+            BD Industries provides professional, custom graphics and branding for Emergency Response & gaming communities.
+        </p>
+        <div class="buttons">
+            <button class="btn-primary" onclick="window.open('https://discord.gg/Sr6XPZbpPh','_blank')">Join Discord</button>
+            <button class="btn-secondary" onclick="window.open('https://discord.com/channels/1562550244393091205/1562838333451804704','_blank')">Make a Payment</button>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="section">
+        <p class="section-label">What We Do</p>
+        <h2>Professional <span>design</span> services.</h2>
+        <div class="section-grid">
+            <div>
+                We craft logos, banners, UI elements, and full branding packages tailored exactly to your server’s style — spooky, clean, or anything in between.
+            </div>
+            <div>
+                Orders and customer communication are handled directly through our Discord server for fast, clear support.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        BD Industries <span>🎃</span> — All designs made with care
+    </footer>
+</body>
+</html>
